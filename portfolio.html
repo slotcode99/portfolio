@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom Portfolio</title>
+    <style>
+        /* Globalni stilovi */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #ececec;
+            color: #333;
+        }
+        nav {
+            background-color: #222;
+            color: #fff;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #f0a500;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 4em 2em;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        .header p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        section {
+            padding: 2em;
+            margin: 2em auto;
+            max-width: 1200px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5em;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        h2 {
+            border-bottom: 2px solid #f0a500;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigacija -->
+    <nav>
+        <div class="logo">Mom's Art</div>
+        <ul class="nav-links">
+            <li><a href="#gallery">Galerija</a></li>
+        </ul>
+    </nav>
+    <!-- Glavna sekcija -->
+    <header class="header">
+        <h1>Dobrodošli na Moj Portfolio</h1>
+        <p>Ovo je zbirka umetničkih radova moje mame.</p>
+    </header>
+    <!-- Sekcija Galerija -->
+    <section id="gallery">
+        <h2>Galerija Radova</h2>
+        <div class="gallery">
+            <!-- Dodajte 30 slika ovde -->
+            <img src="ostrog.png" alt="Artwork 1">
+            <img src="nestomamino.png" alt="Artwork 2">
+            <img src="nesto.png" alt="Artwork 3">
+            <img src="grad.png" alt="Artwork 4">
+            <img src="nekaptica.png" alt="Artwork 5">
+            <img src="konj.png" alt="Artwork 6">
+            <img src="zena.png" alt="Artwork 7">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 8">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 9">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 10">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 11">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 12">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 13">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 14">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 15">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 16">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 17">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 18">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 19">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 20">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 21">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 22">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 23">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 24">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 25">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 26">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 27">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 28">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 29">
+            <img src="https://via.placeholder.com/600x400" alt="Artwork 30">
+        </div>
+    </section>
+</body>
+</html>
