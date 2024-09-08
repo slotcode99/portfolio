@@ -65,22 +65,51 @@
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 1.5em;
         }
-        .gallery img {
-            width: 100%;
-            height: auto;
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
             border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: box-shadow 0.3s;
         }
-        .gallery img:hover {
-            transform: scale(1.03);
+        .gallery-item:hover {
             box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
-        h2 {
-            border-bottom: 2px solid #f0a500;
-            padding-bottom: 0.5em;
-            margin-bottom: 1em;
-            color: #222;
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-item .title, .gallery-item .description {
+            padding: 0.75em;
+            text-align: center;
+        }
+        .gallery-item .title {
+            font-weight: bold;
+            background-color: #333;
+            color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .gallery-item .description {
+            background-color: #f4f4f4;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Medijski upiti za manje ekrane */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -102,36 +131,156 @@
         <h2>Galerija Radova</h2>
         <div class="gallery">
             <!-- Dodajte 30 slika ovde -->
-            <img src="ostrog.png" alt="Artwork 1">
-            <img src="nestomamino.png" alt="Artwork 2">
-            <img src="nesto.png" alt="Artwork 3">
-            <img src="grad.png" alt="Artwork 4">
-            <img src="nekaptica.png" alt="Artwork 5">
-            <img src="konj.png" alt="Artwork 6">
-            <img src="zena.png" alt="Artwork 7">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 8">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 9">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 10">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 11">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 12">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 13">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 14">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 15">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 16">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 17">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 18">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 19">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 20">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 21">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 22">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 23">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 24">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 25">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 26">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 27">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 28">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 29">
-            <img src="https://via.placeholder.com/600x400" alt="Artwork 30">
+            <div class="gallery-item">
+                <div class="title">“Manastir Ostrog”</div>
+                <img src="ostrog.png" alt="Artwork 1">
+                <div class="description">Ulje na platnu 30x40cm 2024.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Replika “Rembrantov autoportret”</div>
+                <img src="nestomamino.png" alt="Artwork 2">
+                <div class="description">Ulje na lesonitu 2022.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 3</div>
+                <img src="nesto.png" alt="Artwork 3">
+                <div class="description">Informacije o umetničkom delu 3</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 4</div>
+                <img src="grad.png" alt="Artwork 4">
+                <div class="description">Informacije o umetničkom delu 4</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 5</div>
+                <img src="nekaptica.png" alt="Artwork 5">
+                <div class="description">Informacije o umetničkom delu 5</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 6</div>
+                <img src="konj.png" alt="Artwork 6">
+                <div class="description">Informacije o umetničkom delu 6</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 7</div>
+                <img src="zena.png" alt="Artwork 7">
+                <div class="description">Informacije o umetničkom delu 7</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 8</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 8">
+                <div class="description">Informacije o umetničkom delu 8</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 9</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 9">
+                <div class="description">Informacije o umetničkom delu 9</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 10</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 10">
+                <div class="description">Informacije o umetničkom delu 10</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 11</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 11">
+                <div class="description">Informacije o umetničkom delu 11</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 12</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 12">
+                <div class="description">Informacije o umetničkom delu 12</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 13</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 13">
+                <div class="description">Informacije o umetničkom delu 13</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 14</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 14">
+                <div class="description">Informacije o umetničkom delu 14</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 15</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 15">
+                <div class="description">Informacije o umetničkom delu 15</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 16</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 16">
+                <div class="description">Informacije o umetničkom delu 16</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 17</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 17">
+                <div class="description">Informacije o umetničkom delu 17</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 18</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 18">
+                <div class="description">Informacije o umetničkom delu 18</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 19</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 19">
+                <div class="description">Informacije o umetničkom delu 19</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 20</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 20">
+                <div class="description">Informacije o umetničkom delu 20</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 21</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 21">
+                <div class="description">Informacije o umetničkom delu 21</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 22</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 22">
+                <div class="description">Informacije o umetničkom delu 22</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 23</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 23">
+                <div class="description">Informacije o umetničkom delu 23</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 24</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 24">
+                <div class="description">Informacije o umetničkom delu 24</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 25</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 25">
+                <div class="description">Informacije o umetničkom delu 25</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 26</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 26">
+                <div class="description">Informacije o umetničkom delu 26</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 27</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 27">
+                <div class="description">Informacije o umetničkom delu 27</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 28</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 28">
+                <div class="description">Informacije o umetničkom delu 28</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 29</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 29">
+                <div class="description">Informacije o umetničkom delu 29</div>
+            </div>
+            <div class="gallery-item">
+                <div class="title">Naziv 30</div>
+                <img src="https://via.placeholder.com/600x400" alt="Artwork 30">
+                <div class="description">Informacije o umetničkom delu 30</div>
+            </div>
         </div>
     </section>
 </body>
